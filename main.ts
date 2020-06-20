@@ -1,5 +1,5 @@
 input.onPinPressed(TouchPin.P0, function () {
-    cas1 = control.eventTimestamp()
+    cas1 = input.runningTime()
     reakcia1 = cas1 - start_cas
 })
 input.onPinPressed(TouchPin.P2, function () {
@@ -14,10 +14,10 @@ input.onPinPressed(TouchPin.P2, function () {
     basic.pause(oneskorenie)
     basic.showIcon(IconNames.Skull)
     hra_zacala = true
-    start_cas = control.eventTimestamp()
+    start_cas = input.runningTime()
 })
 input.onPinPressed(TouchPin.P1, function () {
-    cas2 = control.eventTimestamp()
+    cas2 = input.runningTime()
     reakcia2 = cas2 - start_cas
 })
 let cas2 = 0
